@@ -1,0 +1,173 @@
+\appendix
+
+\section{H$\alpha$ Emission Constraints}
+\label{app:halpha}
+
+To search for Classical Be-type stars and young stellar objects with circumstellar decretion disks, we conducted a targeted narrow-band H$\alpha$ photometric survey using the LCO 0.4m telescope network \cite{brown_cumbres_2013}. Due to the restricted Field of View (FOV) of the LCO imagers relative to the Gaia sky coverage, 34 of the 70 highly probable \texttt{GaussCluster} kinematic members physically fell within the footprint of the observations.
+
+We utilized an automated aperture photometry pipeline to extract instrumental H$\alpha$ magnitudes for these 34 core members. By plotting the instrumental H$\alpha$ magnitude against the Gaia $G_{RP}$ magnitude, we constructed an H$\alpha$ Diagram for the cluster (Figure~\ref{fig:halpha_tcd}). A 1:1 baseline was derived using the median offset of the cluster members, with a strict statistical boundary set at $3\sigma$ to flag emission-line outliers. 
+
+None of the 34 kinematic members crossed this formal $3\sigma$ emission threshold, remaining statistically indistinguishable from the baseline continuum. While the known peculiar emission-line variable V439 Cyg was recovered as a high-probability kinematic member, it did not exhibit significant emission excess during this observational epoch. This null result is consistent with the highly transient nature of Be-star decretion disks, which are known to periodically dissipate and reform over multi-year timescales \cite{rivinius_classical_2013}. The lack of active, strong circumstellar emission across the kinematic core places a meaningful physical constraint on the current evolutionary state of the cluster's B-type population.
+
+
+\begin{figure}[h!]
+\centering
+    \includegraphics[width=0.6\textwidth]{Be87_Halpha_TCD_Single_3D.png}
+    \caption{The H$\alpha$ Diagram for Be87. The 34 kinematically confirmed core members within the FOV form the baseline. No members cross the formal $3\sigma$ statistical threshold, indicating a lack of active circumstellar decretion disks during this observational epoch.}
+    \label{fig:halpha_tcd}
+\end{figure}
+
+\clearpage
+\newpage
+
+\section{Berkeley 87 Hunt Comparison}
+\label{app:be87_hunt}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{Be87_GaussCluster_vs_Hunt.png}
+    \caption{Spatial and parallax distribution comparison, along with a Colour-Magnitude Diagram for Berkeley 87 against the Hunt et al. \cite{hunt_improving_2023} catalogue (red, 82 members within 15 arcminutes).}
+    \label{fig:hunt_comparison_be87}
+\end{figure}
+
+
+\section{NGC 957 Validation Diagnostics}
+\label{app:ngc957}
+
+\begin{figure}[h!]
+   \includegraphics[width=\textwidth]{GaussCluster_Diagnostics_Cosmetic_ngc957.png}
+    \caption{\texttt{GaussCluster} 4-panel diagnostic dashboard for NGC 957. The algorithm recovered 180 members ( $\ge 0.9$), forming a tight Main Sequence.}
+    \label{fig:ngc957_diagnostics_4panel}
+\end{figure}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{NGC957_GaussCluster_vs_STORM.png}
+    \caption{Spatial and parallax distribution comparison, along with a Colour-Magnitude Diagram for NGC 957. Our \texttt{GaussCluster} model (blue, 180 members) versus STORM (red, 311 members within 15 arcminutes).}
+    \label{fig:ngc957_storm2}
+\end{figure}
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{NGC957_GaussCluster_vs_Hunt.png}
+    \caption{Spatial and parallax distribution comparison, along with a Colour-Magnitude Diagram for NGC 957. Our \texttt{GaussCluster} model (blue, 180 members) versus Hunt et al. \cite{hunt_improving_2023} (red, 252 members within 15 arcminutes).}
+    \label{fig:ngc957_hunt}
+\end{figure}
+
+\section{Spatial Verification (King Profiles)}
+\label{app:king}
+
+To further validate the spatial structure of the kinematically recovered members, we analyzed their radial surface density distribution. Open clusters exhibit a dense core surrounded by a diffuse halo, a structure mathematically well-described by an empirical King Profile \cite{king_structure_1962}. By calculating the spatial density of the recovered members in concentric annuli expanding outward from the cluster centroid, we fitted standard King models to both Berkeley 87 and NGC 957 (Figure~\ref{fig:king_profiles}).
+
+The resulting fits show a steep, continuous decay in spatial density from the dense core down to the asymptotic background field level. This smooth transition is a hallmark of a gravitationally bound, relaxed system. The fact that the kinematically selected members closely follow the inner regions of a theoretical King Profile without any spatial priors having been imposed during the \texttt{GaussCluster} extraction process is consistent with a gravitationally bound structure. This supports the interpretation that the restrictive 3D Gaussian Mixture Model isolated a gravitationally bound inner core of the cluster, while rejecting the diffuse spatial interlopers that contaminate spatial-density models.
+
+
+\begin{figure}[h!]
+    \includegraphics[width=\textwidth]{King_Profiles.png}
+    \caption{Empirical King Profile fits for the recovered spatial populations of Berkeley 87 and NGC 957. The steep decay to zero spatial density is consistent with the pipeline isolating the gravitationally bound inner core.}
+    \label{fig:king_profiles}
+\end{figure}
+
+\clearpage
+
+\section{Berkeley 87 Kinematic Catalogue}
+\label{app:catalogue}
+
+The complete catalogue of the 70 highly probable ($P \ge 0.9$) kinematic members of Berkeley 87, derived via the \texttt{GaussCluster} 3GMM pipeline is listed below in Table \ref{tab:be87_members}.
+
+\begin{longtable}{lccccccc}
+    \caption{Astrometric parameters and membership probabilities for the 70 kinematic members of Berkeley 87.}
+    \label{tab:be87_members} \\
+    
+    % Header for the first page
+    \hline\hline
+    Gaia DR3 Source ID & RA (deg) & Dec (deg) & $\varpi$ (mas) & $\mu_{\alpha*}$ (mas/yr) & $\mu_{\delta}$ (mas/yr) & $G$ (mag) & $P_{memb}$ \\
+    \hline
+    \endfirsthead
+    
+    % Header to repeat on subsequent pages
+    \multicolumn{8}{c}{{\tablename\ \thetable{} -- continued from previous page}} \\
+    \hline\hline
+    Gaia DR3 Source ID & RA (deg) & Dec (deg) & $\varpi$ (mas) & $\mu_{\alpha*}$ (mas/yr) & $\mu_{\delta}$ (mas/yr) & $G$ (mag) & $P_{memb}$ \\
+    \hline
+    \endhead
+    
+    % Footer for pages that break
+    \hline \multicolumn{8}{r}{{Continued on next page...}} \\
+    \endfoot
+    
+    % Footer for the very last page
+    \hline\hline
+    \endlastfoot
+
+2057967188004563968 & 305.4765 & 37.3923 & 0.544 & -3.575 & -6.185 & 13.22 & 0.97 \\
+2057966810047478272 & 305.4304 & 37.4325 & 0.562 & -3.560 & -6.193 & 15.26 & 0.97 \\
+2060973321517873024 & 305.2128 & 37.4891 & 0.531 & -3.548 & -6.182 & 14.50 & 0.97 \\
+2060974867706114176 & 305.2673 & 37.6081 & 0.565 & -3.580 & -6.095 & 14.08 & 0.97 \\
+2060976791851636224 & 305.2862 & 37.6729 & 0.527 & -3.593 & -6.234 & 15.58 & 0.97 \\
+2057966294651410560 & 305.3680 & 37.3780 & 0.554 & -3.603 & -6.145 & 15.18 & 0.97 \\
+2060995998936497664 & 305.5421 & 37.6546 & 0.537 & -3.567 & -6.237 & 13.80 & 0.97 \\
+2060981396056452864 & 305.1036 & 37.5984 & 0.573 & -3.612 & -6.147 & 15.20 & 0.97 \\
+2057991514699667840 & 305.5956 & 37.5132 & 0.609 & -3.568 & -6.183 & 16.27 & 0.97 \\
+2060967136764958592 & 305.2099 & 37.4545 & 0.596 & -3.585 & -6.182 & 16.29 & 0.96 \\
+2057965607456610176 & 305.4236 & 37.3563 & 0.556 & -3.602 & -6.274 & 14.47 & 0.96 \\
+2060969232708930816 & 305.3722 & 37.4314 & 0.557 & -3.618 & -6.201 & 14.57 & 0.96 \\
+2060971706610308352 & 305.4429 & 37.5617 & 0.627 & -3.600 & -6.212 & 15.95 & 0.96 \\
+2057960281697198592 & 305.3364 & 37.3428 & 0.576 & -3.591 & -6.293 & 14.90 & 0.96 \\
+2060971053775075584 & 305.3883 & 37.4865 & 0.590 & -3.563 & -6.276 & 15.81 & 0.96 \\
+2057968321875966592 & 305.4461 & 37.4534 & 0.562 & -3.545 & -6.283 & 14.65 & 0.96 \\
+2060999503642462976 & 305.4324 & 37.6729 & 0.582 & -3.622 & -6.183 & 15.58 & 0.96 \\
+2060974833346372352 & 305.2595 & 37.5849 & 0.577 & -3.604 & -6.078 & 15.47 & 0.96 \\
+2061000809309144064 & 305.3437 & 37.7247 & 0.547 & -3.539 & -6.083 & 14.18 & 0.96 \\
+2057967428522738432 & 305.4998 & 37.4397 & 0.602 & -3.534 & -6.228 & 12.62 & 0.96 \\
+2060975417462080768 & 305.3448 & 37.6014 & 0.549 & -3.536 & -6.254 & 15.84 & 0.96 \\
+2060977204168494720 & 305.3098 & 37.6895 & 0.537 & -3.625 & -6.113 & 13.26 & 0.95 \\
+2057966157212461056 & 305.3422 & 37.3526 & 0.523 & -3.544 & -6.247 & 16.46 & 0.95 \\
+2057994881954220800 & 305.6311 & 37.6562 & 0.560 & -3.632 & -6.136 & 14.53 & 0.95 \\
+2060980124746108032 & 305.1148 & 37.5158 & 0.549 & -3.521 & -6.205 & 16.12 & 0.95 \\
+2057993370125530240 & 305.6686 & 37.5612 & 0.539 & -3.603 & -6.321 & 14.55 & 0.95 \\
+2057967565961672576 & 305.5507 & 37.4412 & 0.566 & -3.627 & -6.252 & 15.92 & 0.95 \\
+2060969232708934784 & 305.3682 & 37.4389 & 0.551 & -3.560 & -6.341 & 13.44 & 0.95 \\
+2060970675817983488 & 305.3374 & 37.5186 & 0.558 & -3.623 & -6.287 & 14.56 & 0.95 \\
+2060970297860853760 & 305.3187 & 37.4694 & 0.566 & -3.552 & -6.341 & 13.16 & 0.95 \\
+2060969163989449216 & 305.3801 & 37.4224 & 0.497 & -3.608 & -6.285 & 16.40 & 0.95 \\
+2060963219754750208 & 305.2226 & 37.3506 & 0.590 & -3.545 & -6.324 & 15.41 & 0.95 \\
+2057966225931924992 & 305.3745 & 37.3620 & 0.574 & -3.640 & -6.222 & 15.32 & 0.94 \\
+2057964061268331648 & 305.5708 & 37.3800 & 0.496 & -3.531 & -6.275 & 16.36 & 0.94 \\
+2057966672608526464 & 305.4099 & 37.4126 & 0.588 & -3.635 & -6.255 & 16.07 & 0.94 \\
+2060977204168615040 & 305.3148 & 37.6960 & 0.492 & -3.629 & -6.179 & 16.90 & 0.94 \\
+2061000637510448896 & 305.4094 & 37.7288 & 0.569 & -3.513 & -6.127 & 15.94 & 0.94 \\
+2060967927038974080 & 305.1300 & 37.4765 & 0.588 & -3.628 & -6.277 & 16.66 & 0.94 \\
+2057962102763233792 & 305.5286 & 37.2979 & 0.553 & -3.641 & -6.245 & 14.25 & 0.94 \\
+2060976547029134080 & 305.2571 & 37.6288 & 0.566 & -3.517 & -6.283 & 12.30 & 0.94 \\
+2060968923471305856 & 305.2955 & 37.3982 & 0.578 & -3.606 & -6.353 & 14.58 & 0.94 \\
+2057965916694269312 & 305.3815 & 37.3448 & 0.553 & -3.547 & -6.361 & 10.94 & 0.94 \\
+2060971019415325568 & 305.4379 & 37.5115 & 0.449 & -3.541 & -6.292 & 16.63 & 0.93 \\
+2057965676176071808 & 305.4629 & 37.3608 & 0.531 & -3.532 & -6.334 & 14.55 & 0.93 \\
+2057967188004557952 & 305.4849 & 37.3843 & 0.512 & -3.630 & -6.307 & 14.92 & 0.93 \\
+2057968115717522560 & 305.4624 & 37.4350 & 0.578 & -3.544 & -6.362 & 12.80 & 0.93 \\
+2060971878408808192 & 305.3816 & 37.5128 & 0.648 & -3.614 & -6.080 & 17.02 & 0.93 \\
+2060995483549673088 & 305.5059 & 37.6361 & 0.509 & -3.559 & -6.017 & 16.52 & 0.93 \\
+2060972943560907392 & 305.4151 & 37.6248 & 0.531 & -3.655 & -6.195 & 16.03 & 0.93 \\
+2060989058278236800 & 305.3122 & 37.7257 & 0.523 & -3.548 & -6.003 & 15.98 & 0.93 \\
+2060972084567248640 & 305.3878 & 37.5545 & 0.605 & -3.651 & -6.240 & 16.08 & 0.93 \\
+2057964920261827072 & 305.4264 & 37.3144 & 0.529 & -3.612 & -6.363 & 14.94 & 0.92 \\
+2057966874465505024 & 305.4255 & 37.4347 & 0.674 & -3.511 & -6.231 & 16.17 & 0.92 \\
+2060973012280208768 & 305.2564 & 37.4748 & 0.443 & -3.560 & -6.311 & 16.94 & 0.92 \\
+2057964507944938624 & 305.5687 & 37.4015 & 0.549 & -3.581 & -6.396 & 13.64 & 0.92 \\
+2060973871273685632 & 305.2557 & 37.5361 & 0.482 & -3.643 & -6.273 & 16.62 & 0.92 \\
+2060995724067830016 & 305.5696 & 37.6405 & 0.595 & -3.627 & -6.344 & 16.02 & 0.92 \\
+2057968081357787392 & 305.4516 & 37.4350 & 0.564 & -3.616 & -6.370 & 14.71 & 0.92 \\
+2060967411646651264 & 305.1841 & 37.4719 & 0.586 & -3.506 & -6.299 & 16.33 & 0.92 \\
+2060969370147881856 & 305.4042 & 37.4655 & 0.534 & -3.628 & -6.352 & 14.84 & 0.92 \\
+2060999641078034176 & 305.3933 & 37.6799 & 0.548 & -3.592 & -5.963 & 14.27 & 0.92 \\
+2061000293913064320 & 305.4423 & 37.7483 & 0.580 & -3.506 & -6.068 & 14.97 & 0.92 \\
+2060986786231472000 & 305.1902 & 37.6044 & 0.525 & -3.543 & -6.067 & 17.67 & 0.91 \\
+2060975795419202688 & 305.3647 & 37.6260 & 0.525 & -3.658 & -6.225 & 14.68 & 0.91 \\
+2060969404507635840 & 305.3472 & 37.4428 & 0.511 & -3.661 & -6.254 & 16.42 & 0.91 \\
+2057966290349918336 & 305.3665 & 37.3811 & 0.493 & -3.495 & -6.269 & 16.28 & 0.91 \\
+2060968682953119872 & 305.3302 & 37.3902 & 0.573 & -3.574 & -6.415 & 10.41 & 0.91 \\
+2060968614233634816 & 305.3535 & 37.3800 & 0.616 & -3.631 & -6.356 & 11.52 & 0.91 \\
+2057966049831160320 & 305.3963 & 37.3760 & 0.571 & -3.659 & -6.240 & 13.52 & 0.91 \\
+2060968957831040512 & 305.3140 & 37.4086 & 0.570 & -3.567 & -6.414 & 7.94 & 0.90 \\
+
+
+\end{longtable}
+
