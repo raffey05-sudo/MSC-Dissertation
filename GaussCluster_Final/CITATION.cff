@@ -1,0 +1,10 @@
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: "Shakoor"
+    given-names: "Abdul Raffey"
+title: "GaussCluster: A 3D Kinematic Open Cluster Extraction Pipeline"
+version: 1.0.0
+date-released: 2026-09-23
+url: "https://github.com/raffey05-sudo/GaussCluster"
