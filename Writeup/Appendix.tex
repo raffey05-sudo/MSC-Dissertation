@@ -3,17 +3,17 @@
 \section{H$\alpha$ Emission Constraints}
 \label{app:halpha}
 
-To search for Classical Be-type stars and young stellar objects with circumstellar decretion disks, we conducted a targeted narrow-band H$\alpha$ photometric survey using the LCO 0.4m telescope network \cite{brown_cumbres_2013}. Due to the restricted Field of View (FOV) of the LCO imagers relative to the Gaia sky coverage, 34 of the 70 highly probable \texttt{GaussCluster} kinematic members physically fell within the footprint of the observations.
+To search for Classical Be-type stars and young stellar objects with circumstellar decretion disks, we conducted a targeted narrow-band H$\alpha$ photometric survey using the LCO 0.4m telescope network \cite{brown_cumbres_2013}. Due to the restricted Field of View (FOV) of the LCO imagers relative to the Gaia sky coverage, 34 of the 70 highly probable \texttt{GaussCluster} astrometric members physically fell within the footprint of the observations.
 
 We utilized an automated aperture photometry pipeline to extract instrumental H$\alpha$ magnitudes for these 34 core members. By plotting the instrumental H$\alpha$ magnitude against the Gaia $G_{RP}$ magnitude, we constructed an H$\alpha$ Diagram for the cluster (Figure~\ref{fig:halpha_tcd}). A 1:1 baseline was derived using the median offset of the cluster members, with a strict statistical boundary set at $3\sigma$ to flag emission-line outliers. 
 
-None of the 34 kinematic members crossed this formal $3\sigma$ emission threshold, remaining statistically indistinguishable from the baseline continuum. While the known peculiar emission-line variable V439 Cyg was recovered as a high-probability kinematic member, it did not exhibit significant emission excess during this observational epoch. This null result is consistent with the highly transient nature of Be-star decretion disks, which are known to periodically dissipate and reform over multi-year timescales \cite{rivinius_classical_2013}. The lack of active, strong circumstellar emission across the kinematic core places a meaningful physical constraint on the current evolutionary state of the cluster's B-type population.
+None of the 34 astrometric members crossed this formal $3\sigma$ emission threshold, remaining statistically indistinguishable from the baseline continuum. While the known peculiar emission-line variable V439 Cyg was recovered as a high-probability astrometric member, it did not exhibit significant emission excess during this observational epoch. This null result is consistent with the highly transient nature of Be-star decretion disks, which are known to periodically dissipate and reform over multi-year timescales \cite{rivinius_classical_2013}. The lack of active, strong circumstellar emission across the astrometric core places a meaningful physical constraint on the current evolutionary state of the cluster's B-type population.
 
 
 \begin{figure}[h!]
 \centering
     \includegraphics[width=0.6\textwidth]{Be87_Halpha_TCD_Single_3D.png}
-    \caption{The H$\alpha$ Diagram for Be87. The 34 kinematically confirmed core members within the FOV form the baseline. No members cross the formal $3\sigma$ statistical threshold, indicating a lack of active circumstellar decretion disks during this observational epoch.}
+    \caption{The H$\alpha$ Diagram for Be87. The 34 astrometrically confirmed core members within the FOV form the baseline. No members cross the formal $3\sigma$ statistical threshold, indicating a lack of active circumstellar decretion disks during this observational epoch.}
     \label{fig:halpha_tcd}
 \end{figure}
 
@@ -54,26 +54,27 @@ None of the 34 kinematic members crossed this formal $3\sigma$ emission threshol
 \section{Spatial Verification (King Profiles)}
 \label{app:king}
 
-To further validate the spatial structure of the kinematically recovered members, we analyzed their radial surface density distribution. Open clusters exhibit a dense core surrounded by a diffuse halo, a structure mathematically well-described by an empirical King Profile \cite{king_structure_1962}. By calculating the spatial density of the recovered members in concentric annuli expanding outward from the cluster centroid, we fitted standard King models to both Berkeley 87 and NGC 957 (Figure~\ref{fig:king_profiles}).
+To further validate the spatial structure of the astrometrically recovered members, we analyzed their radial surface density distribution. Open clusters exhibit a dense core surrounded by a diffuse halo, a structure mathematically well-described by an empirical King Profile \cite{king_structure_1962}. By calculating the spatial density of the recovered members in concentric annuli expanding outward from the cluster centroid, we fitted standard King models to both Berkeley 87 and NGC 957 (Figure~\ref{fig:king_profiles}).
 
-The resulting fits show a steep, continuous decay in spatial density from the dense core down to the asymptotic background field level. This smooth transition is a hallmark of a gravitationally bound, relaxed system. The fact that the kinematically selected members closely follow the inner regions of a theoretical King Profile without any spatial priors having been imposed during the \texttt{GaussCluster} extraction process is consistent with a gravitationally bound structure. This supports the interpretation that the restrictive 3D Gaussian Mixture Model isolated a gravitationally bound inner core of the cluster, while rejecting the diffuse spatial interlopers that contaminate spatial-density models.
+The resulting fits show a continuous decline in spatial density from the dense core towards the background field level. The recovered members exhibit a concentrated spatial distribution that is described by an empirical King profile. This provides a spatial consistency check on the astrometric membership selection, although the profile alone does not establish that the recovered population is gravitationally bound or relaxed. Notably, the astrometrically selected members closely trace the inner regions described by the King profile, despite spatial position not being included as an explicit dimension in the final \texttt{GaussCluster} membership model. This agreement provides additional evidence that the astrometrically selected population corresponds to the centrally concentrated component of the cluster, while sources with astrometric properties inconsistent with the fitted cluster distribution are excluded from the member sample. The agreement between the spatial and astrometric distributions therefore supports the interpretation of the recovered population as a cluster component, without requiring the King profile alone to establish its dynamical state.
 
 
-\begin{figure}[h!]
-    \includegraphics[width=\textwidth]{King_Profiles.png}
+
+\begin{figure}[h]
+    \includegraphics[width=0.9\textwidth]{King_Profiles.png}
     \caption{Empirical King Profile fits for the recovered spatial populations of Berkeley 87 and NGC 957. The steep decay to zero spatial density is consistent with the pipeline isolating the gravitationally bound inner core.}
     \label{fig:king_profiles}
 \end{figure}
 
 \clearpage
 
-\section{Berkeley 87 Kinematic Catalogue}
+\section{Berkeley 87 astrometric Catalogue}
 \label{app:catalogue}
 
-The complete catalogue of the 70 highly probable ($P \ge 0.9$) kinematic members of Berkeley 87, derived via the \texttt{GaussCluster} 3GMM pipeline is listed below in Table \ref{tab:be87_members}.
+The complete catalogue of the 70 highly probable ($P \ge 0.9$) astrometric members of Berkeley 87, derived via the \texttt{GaussCluster} 3GMM pipeline is listed below in Table \ref{tab:be87_members}.
 
 \begin{longtable}{lccccccc}
-    \caption{Astrometric parameters and membership probabilities for the 70 kinematic members of Berkeley 87.}
+    \caption{Astrometric parameters and membership probabilities for the 70 astrometric members of Berkeley 87.}
     \label{tab:be87_members} \\
     
     % Header for the first page
